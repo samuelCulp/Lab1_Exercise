@@ -1,5 +1,7 @@
 // Lab 1.3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//// samuel culp
+/*The reason for the infinite loop was because if the input was a string 
+instead of an integer the switch would not recognize it.*/
 
 #include <iostream>
 using namespace std;
@@ -18,11 +20,17 @@ int main()
 		cout << "1: Enter Name\n";
 		cout << "2: Enter Age\n";
 		cout << "3: Enter Occupation\n";
-		cin >> choice;
-
+		//cin >> choice;
+		
 		/*if (choice == -1)
 			break;*/
-
+		while(!(cin >> choice)){//This checks the input for something that is not an integer  
+        		cin.clear();  		//And if its something else choice will be set at 0 and then go to default
+        		cin.ignore(100, '\n');
+			int choice = 0;
+			break;
+      		}
+		
 		switch (choice)
 		{
 		case 1:
