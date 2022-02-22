@@ -22,8 +22,6 @@ int main()
 		cout << "3: Enter Occupation\n";
 		//cin >> choice;
 		
-		/*if (choice == -1)
-			break;*/
 		while(!(cin >> choice)){//This checks the input for something that is not an integer  
         		cin.clear();  		//And if its something else choice will be set at 0 and then go to default
         		cin.ignore(100, '\n');
@@ -31,6 +29,9 @@ int main()
 			break;
       		}
 		
+		if (choice == -1){ //In my original upload I forgot to uncomment this part out
+			break;
+		}
 		switch (choice)
 		{
 		case 1:
